@@ -10,6 +10,22 @@ body {
   overflow: auto;
   background-color: #F5F7F8 !important;
 }
+/* .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
+.post-details-card:hover .portfolio-info {
+  opacity: 1;
+}  */
+
+
 
 main {
   margin-top: 100px; /* Adjust this value based on the height of your header */
@@ -3006,6 +3022,8 @@ textarea.form-control-lg {
   .input-group .form-select.is-invalid:focus {
     z-index: 3; }
 
+
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -3045,6 +3063,10 @@ textarea.form-control-lg {
     pointer-events: none;
     opacity: 0.65; }
 
+.home-btn{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .btn-primary {
   color: #fff;
   background-color: #00204a;
@@ -4538,7 +4560,30 @@ textarea.form-control-lg {
   padding: 1rem 1rem; }
 
 .card-title {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%; 
+    cursor: pointer;
+}
+.card-title::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white; /* Set the background color as needed */
+  padding: 0.5rem; /* Set the padding as needed */
+  z-index: 1; /* Ensure the tooltip is on top */
+  white-space: normal;
+  overflow: visible;
+  max-width: none;
+  display: none;
+}
+
+.card-title:hover::after {
+  display: block;
+}
 
 .card-subtitle {
   margin-top: -0.25rem;
@@ -10173,11 +10218,12 @@ textarea {
 
 .menu-bg-wrap {
   background-color: #005555;
-  padding: 20px 30px;
+  padding: 15px 30px;
   position: relative;
   float: left;
   width: 100%;
-  border-radius: 7px;
+  
+  /* border-radius: 7px; */
   -webkit-box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.1);
   box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.1); }
 
