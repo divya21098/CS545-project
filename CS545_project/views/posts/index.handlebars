@@ -1,0 +1,125 @@
+<!-- all handlerbars -->
+<main>
+
+
+    <div class="container test">
+
+        <br>
+
+        {{!-- {{#each posts}}
+        <div class="card post-details-card mb-3">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-sm">
+                        {{!-- <img src="/posts/postpic/{{this._id}}" alt="Apartment Photo" class="aptPhoto" /> 
+                        <img src="public/images/post1.jpg" alt="Apartment Photo" class="aptPhoto" />
+
+                    </div>
+                    <div class="col-sm">
+
+                        <a href="/posts/{{this._id}}">
+                            <h2>{{this.postTitle}}</h2>
+                        </a>
+                        <p>Location: {{this.preference.location}}</p>
+                         <p class="postBodyText">{{this.postBody}} </p> 
+
+                        <p>Date Posted: {{this.postDate}}</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="text-end" style="margin-right:10px">{{this.userId}}</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {{/each}} --}}
+
+        <div class="container">
+            <div class="row">
+                {{#each posts}}
+                <div class="col-sm-4 mb-3">
+                    <div class="card post-details-card">
+                        <img src="public/images/post1.jpg" alt="Apartment Photo" class="card-img-top aptPhoto">
+                        <div class="card-body">
+                            <a href="/posts/{{this._id}}">
+                                <h2 class="card-title">{{this.postTitle}}</h2>
+                            </a>
+                            <p class="card-text">Location: {{this.preference.location}}</p>
+                           
+                            {{!-- <p class="card-text">{{this.postBody}}</p>  --}}
+                            <p class="card-text">Date Posted: {{this.postDate}}</p>
+                            <p class="card-text text-end" style="margin-right:10px">{{this.userId}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div> 
+
+        {{!-- <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="font-weight-bold text-primary heading">
+              Popular Properties
+            </h2>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <p>
+              <!-- <a
+                href="#"
+                target="_blank"
+                class="btn btn-primary text-white py-3 px-4"
+                >View all properties</a
+              > -->
+              <button class="btn btn-primary" type="button" onclick="location.href='http://localhost:3000/login'">
+                View all properties
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="property-slider-wrap">
+              <div class="property-slider">
+                <div class="property-item">
+                  <a href="property-single.html" class="img">
+                    <img
+                      src="../public/images/img_1.jpg"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                  </a>
+
+                  <div class="property-content">
+                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div>
+                      <span class="d-block mb-2 text-black-50"
+                        >5232 California Fake, Ave. 21BC</span
+                      >
+                      <span class="city d-block mb-3">California, USA</span>
+
+                      <div class="specs d-flex mb-4">
+                        <span class="d-block d-flex align-items-center me-3">
+                          <span class="icon-bed me-2"></span>
+                          <span class="caption">2 beds</span>
+                        </span>
+                        <span class="d-block d-flex align-items-center">
+                          <span class="icon-bath me-2"></span>
+                          <span class="caption">2 baths</span>
+                        </span>
+                      </div>
+
+                      <a
+                        href="property-single.html"
+                        class="btn btn-primary py-2 px-3"
+                        >See details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div> --}}
+
+    </div>
+</main>
