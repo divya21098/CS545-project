@@ -29,7 +29,7 @@
   </head>
 
   <body class="body-index">
-    <!-- Background image -->
+
     <nav class="site-nav">
       <div class="container">
         <div class="menu-bg-wrap">
@@ -41,7 +41,6 @@
               <li class="has-children">
                 <a href="/posts" id="postList" class="nav-link">Posts</a>
               </li>
-              <li><a href="services.html" class="nav-link">Services</a></li>
               <li><a href="about.html" class="nav-link">About</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -71,23 +70,23 @@
       <div class="hero-slide">
         <div
           class="img overlay"
-          style="background-image: url('../public/images/hero_bg_3.jpg')"
+          style="background-image: url('../public/images/img1.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('../public/images/hero_bg_2.jpg')"
+          style="background-image: url('../public/images/img2.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('../public/images/hero_bg_1.jpg')"
+          style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('../public/images/img3.jpg')"
         ></div>
       </div>
-
+    
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-9 text-center">
             <h1 class="heading" data-aos="fade-up">
-              Easiest way to find your dream home - Register
+              Easiest way to find your next Roomate
             </h1>
             
             <button class="btn btn-primary" type="button" onclick="location.href='http://localhost:3000/login'">
@@ -104,7 +103,7 @@
         <div class="row mb-5 align-items-center">
           <div class="col-lg-6">
             <h2 class="font-weight-bold text-primary heading">
-              Popular Properties
+              Popular Posts
             </h2>
           </div>
           <div class="col-lg-6 text-lg-end">
@@ -115,8 +114,8 @@
                 class="btn btn-primary text-white py-3 px-4"
                 >View all properties</a
               > -->
-              <button class="btn btn-primary" type="button" onclick="location.href='http://localhost:3000/login'">
-                View all properties
+              <button class="btn btn-primary" type="button" onclick="location.href='http://localhost:3000/posts'">
+                View all posts
               </button>
             </p>
           </div>
@@ -153,10 +152,11 @@
                         </span>
                       </div>
 
-                      <a
-                        href="property-single.html"
+                      <button
+                       
                         class="btn btn-primary py-2 px-3"
-                        >See details</a
+                        type="button" onclick="location.href='http://localhost:3000/login'"
+                        >See details</button>
                       >
                     </div>
                   </div>
@@ -495,56 +495,7 @@
       </div>
     </div>
 
-    <section class="features-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="box-feature">
-              <span class="flaticon-house"></span>
-              <h3 class="mb-3">Our Properties</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptates, accusamus.
-              </p>
-              <p><a href="#" class="learn-more">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-            <div class="box-feature">
-              <span class="flaticon-building"></span>
-              <h3 class="mb-3">Property for Sale</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptates, accusamus.
-              </p>
-              <p><a href="#" class="learn-more">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-            <div class="box-feature">
-              <span class="flaticon-house-3"></span>
-              <h3 class="mb-3">Real Estate Agent</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptates, accusamus.
-              </p>
-              <p><a href="#" class="learn-more">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
-            <div class="box-feature">
-              <span class="flaticon-house-1"></span>
-              <h3 class="mb-3">House for Sale</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptates, accusamus.
-              </p>
-              <p><a href="#" class="learn-more">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 
     <div class="section sec-testimonials">
       <div class="container">
@@ -888,14 +839,11 @@
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              . All Rights Reserved. &mdash; Designed with love by
+              . All Rights Reserved. &mdash; Designed by RoomateFinder
               <a href="https://untree.co">Untree.co</a>
               <!-- License information: https://untree.co/license/ -->
             </p>
-            <div>
-              Distributed by
-              <a href="https://themewagon.com/" target="_blank">themewagon</a>
-            </div>
+            
           </div>
         </div>
       </div>
