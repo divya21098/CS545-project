@@ -8,6 +8,7 @@
     />
 
     <title>Roomate Finder</title>
+    
     <link rel="stylesheet" href="../public/css/style.css" />
     <link rel="shortcut icon" href="favicon.png" />
 
@@ -26,6 +27,7 @@
 
     <link rel="stylesheet" href="../public/css/tiny-slider.css" />
     <link rel="stylesheet" href="../public/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
 
 
@@ -38,10 +40,11 @@
   
   <body class="body-index">
 
-    <nav class="site-nav">
-      <div class="container-fluid">
+    
+      <!-- <div class="container-fluid">
         <div class="menu-bg-wrap">
-          <div class="site-navigation">
+          <div>
+            <a href="#" class="logo m-0 float-start" style="font-family:'Courier New', Courier, monospace;">Roommate Finder</a>
             <ul
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
@@ -63,7 +66,34 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
+
+      <nav class="navbar fixed-top navbar-light justify-content-center" style="background-color: rgb(255, 255, 255);border-top-width: 10px;margin-top: 0px;padding-top: 15px;">
+        <!-- Navbar content -->
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        &nbsp
+        <li class="nav-item">
+          <a class="nav-link" href="#">Posts</a>
+        </li>
+        &nbsp
+        &nbsp
+        <li class="nav-item">
+          <h2 style="font-family: 'Courier New', Courier, monospace;" href="#"><b>Roomate Finder</b></h2>
+        </li>
+        &nbsp
+        &nbsp
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recommendations</a>
+        </li>
+        &nbsp
+        <li class="nav-item">
+          <a class="nav-link" href="#">Search</a>
+        </li>
+      </ul>
     </nav>
 
 
@@ -82,15 +112,15 @@
       <div class="hero-slide">
         <div
           class="img overlay"
-          style="background-image: url('../public/images/img1.jpg')"
+          style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%), url('../public/images/r1.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('../public/images/img2.jpg')"
+          style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%), url('../public/images/r2.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('../public/images/img3.jpg')"
+          style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%), url('../public/images/r3.jpg')"
         ></div>
       </div>
     
@@ -111,24 +141,21 @@
     </div>
 
     <div class="section">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-lg-6">
             <h2 class="font-weight-bold text-primary heading">
-              Popular Posts
+              Popular Properties
             </h2>
           </div>
           <div class="col-lg-6 text-lg-end">
             <p>
-              <!-- <a
+              <a
                 href="#"
                 target="_blank"
                 class="btn btn-primary text-white py-3 px-4"
                 >View all properties</a
-              > -->
-              <button class="btn btn-primary" type="button" onclick="location.href='http://localhost:3000/posts'">
-                View all posts
-              </button>
+              >
             </p>
           </div>
         </div>
@@ -138,50 +165,7 @@
               <div class="property-slider">
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_1.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                  </a>
-
-                  <div class="property-content">
-                    <div class="price mb-2"><span>$1,291,000</span></div>
-                    <div>
-                      <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
-                      >
-                      <span class="city d-block mb-3">California, USA</span>
-
-                      <div class="specs d-flex mb-4">
-                        <span class="d-block d-flex align-items-center me-3">
-                          <span class="icon-bed me-2"></span>
-                          <span class="caption">2 beds</span>
-                        </span>
-                        <span class="d-block d-flex align-items-center">
-                          <span class="icon-bath me-2"></span>
-                          <span class="caption">2 baths</span>
-                        </span>
-                      </div>
-
-                      <button
-                       
-                        class="btn btn-primary py-2 px-3"
-                        type="button" onclick="location.href='http://localhost:3000/login'"
-                        >See details</button>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- .item -->
-
-                <div class="property-item">
-                  <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_2.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -215,11 +199,7 @@
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_3.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -249,15 +229,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_4.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -287,15 +265,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_5.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -325,15 +301,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_6.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -363,15 +337,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_7.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -401,15 +373,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_8.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -439,15 +409,14 @@
                     </div>
                   </div>
                 </div>
+                <!-- .item -->
+
+
                 <!-- .item -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img
-                      src="../public/images/img_1.jpg"
-                      alt="Image"
-                      class="img-fluid"
-                    />
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
@@ -478,6 +447,79 @@
                   </div>
                 </div>
                 <!-- .item -->
+
+                <!-- .item -->
+
+                <div class="property-item">
+                  <a href="property-single.html" class="img">
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
+                  </a>
+
+                  <div class="property-content">
+                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div>
+                      <span class="d-block mb-2 text-black-50"
+                        >5232 California Fake, Ave. 21BC</span
+                      >
+                      <span class="city d-block mb-3">California, USA</span>
+
+                      <div class="specs d-flex mb-4">
+                        <span class="d-block d-flex align-items-center me-3">
+                          <span class="icon-bed me-2"></span>
+                          <span class="caption">2 beds</span>
+                        </span>
+                        <span class="d-block d-flex align-items-center">
+                          <span class="icon-bath me-2"></span>
+                          <span class="caption">2 baths</span>
+                        </span>
+                      </div>
+
+                      <a
+                        href="property-single.html"
+                        class="btn btn-primary py-2 px-3"
+                        >See details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- .item -->
+
+                <!-- .item -->
+
+                <div class="property-item">
+                  <a href="property-single.html" class="img">
+                    <img src="../public/images/img_1.jpg" alt="Image" class="img-fluid" />
+                  </a>
+
+                  <div class="property-content">
+                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div>
+                      <span class="d-block mb-2 text-black-50"
+                        >5232 California Fake, Ave. 21BC</span
+                      >
+                      <span class="city d-block mb-3">California, USA</span>
+
+                      <div class="specs d-flex mb-4">
+                        <span class="d-block d-flex align-items-center me-3">
+                          <span class="icon-bed me-2"></span>
+                          <span class="caption">2 beds</span>
+                        </span>
+                        <span class="d-block d-flex align-items-center">
+                          <span class="icon-bath me-2"></span>
+                          <span class="caption">2 baths</span>
+                        </span>
+                      </div>
+
+                      <a
+                        href="property-single.html"
+                        class="btn btn-primary py-2 px-3"
+                        >See details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- .item -->
+
               </div>
 
               <div
@@ -506,7 +548,6 @@
         </div>
       </div>
     </div>
-
    
 
 
@@ -520,7 +561,7 @@
         <div class="row mb-5 align-items-center">
           <div class="col-md-6">
             <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
-              Customer Says
+              User Feedback
             </h2>
           </div>
           <div class="col-md-6 text-md-end">
@@ -541,7 +582,7 @@
         <div class="testimonial-slider-wrap">
           <div class="testimonial-slider">
             <div class="item">
-              <div class="testimonial">
+              <div class="testimonial" style="text-align: center;">
                 <img
                   src="../public/images/person_1-min.jpg"
                   alt="Image"
@@ -568,7 +609,7 @@
             </div>
 
             <div class="item">
-              <div class="testimonial">
+              <div class="testimonial" style="text-align: center;">
                 <img
                   src="../public/images/person_2-min.jpg"
                   alt="Image"
@@ -595,7 +636,7 @@
             </div>
 
             <div class="item">
-              <div class="testimonial">
+              <div class="testimonial" style="text-align: center;">
                 <img
                   src="../public/images/person_3-min.jpg"
                   alt="Image"
@@ -622,7 +663,7 @@
             </div>
 
             <div class="item">
-              <div class="testimonial">
+              <div class="testimonial" style="text-align: center;">
                 <img
                   src="../public/images/person_4-min.jpg"
                   alt="Image"
@@ -650,20 +691,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
           </div>
         </div>
@@ -675,7 +702,7 @@
         <div class="row justify-content-center text-center mb-5">
           <div class="col-lg-5">
             <h2 class="font-weight-bold heading text-primary mb-4">
-              Let's find home that's perfect for you
+              Let's find a Roomate that's perfect for you
             </h2>
             <p class="text-black-50">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -687,7 +714,7 @@
           <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
             <div class="img-about dots">
               <img
-                src="../public/images/hero_bg_3.jpg"
+                src="../public/images/img3.jpg"
                 alt="Image"
                 class="img-fluid"
               />
@@ -734,158 +761,34 @@
             </div>
           </div>
         </div>
-        <div class="row section-counter mt-5">
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">3298</span></span
-              >
-              <span class="caption text-black-50"># of Buy Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">2181</span></span
-              >
-              <span class="caption text-black-50"># of Sell Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">9316</span></span
-              >
-              <span class="caption text-black-50"># of All Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">7191</span></span
-              >
-              <span class="caption text-black-50"># of Agents</span>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
 
-    <div class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Contact</h3>
-              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
-              <ul class="list-unstyled links">
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li>
-                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Sources</h3>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-              </ul>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Creative</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Links</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Our Vision</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-
-              <ul class="list-unstyled social">
-                <li>
-                  <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-pinterest"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-dribbble"></span></a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
+    
+     
+        
         <!-- /.row -->
 
         <div class="row mt-5">
           <div class="col-12 text-center">
-            <!-- 
-              **==========
-              NOTE: 
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **==========
-            -->
-
+          
             <p>
-              Copyright &copy;
+              <!-- Copyright &copy;
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              . All Rights Reserved. &mdash; Designed by RoomateFinder
-              <a href="https://untree.co">Untree.co</a>
-              <!-- License information: https://untree.co/license/ -->
+              . All Rights Reserved. &mdash; 
+              -->
+              Designed by Team RoomateFinder for CS 545 HCI Project  
+            
             </p>
+            <br>
+            
             
           </div>
-        </div>
-      </div>
+        
+      
       <!-- /.container -->
     </div>
     <!-- /.site-footer -->
@@ -897,15 +800,6 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
 
 
 
