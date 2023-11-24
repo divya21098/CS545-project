@@ -3,15 +3,20 @@
         <div class="card mt-2 mb-2">
             <div class="row">
                 <div class="col-sm div-row-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Avatar" />
+                    {{#if (eq userInfo.gender "Female")}}
+                    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678130-profile-alt-4-512.png"
+                        alt="Female Avatar" />
+                    {{else}}
+                    <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Male Avatar" />
+                    {{/if}}
                 </div>
-                <div class="col-sm ml-3 mt-3 mb-3">
-                    <p>{{userInfo.firstName}} {{userInfo.lastName}}</p>
-                    <p>{{userInfo.emailId}}</p>
-                    <p>{{userInfo.age}}</p>
-                    <p>{{userInfo.gender}}</p>
-                    <p>{{userInfo.aboutMe}}</p>
-                    <p>{{userInfo.nationality}}</p>
+                <div class="col-sm ml-1 mt-3 mb-2" style="background-color:cornsilk">
+                    <p>Name : {{userInfo.firstName}} {{userInfo.lastName}}</p>
+                    <p>EmailId : {{userInfo.emailId}}</p>
+                    <p>Age : {{userInfo.age}}</p>
+                    <p>Gender : {{userInfo.gender}}</p>
+                    <p>About Me : {{userInfo.aboutMe}}</p>
+                    <p>Nationality : {{userInfo.nationality}}</p>
                     <p>Preferences - </p>
 
                     {{#each userInfo.preference}}
