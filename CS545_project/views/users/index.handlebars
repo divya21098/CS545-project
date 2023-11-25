@@ -10,9 +10,9 @@
                     <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Male Avatar" />
                     {{/if}}
                 </div>
-                <div class="col-sm ml-1 mt-3 mb-2" style="background-color:cornsilk">
+                <div class="col-sm ml-1 mt-3 mb-2 profile-info">
                     <p>Name : {{userInfo.firstName}} {{userInfo.lastName}}</p>
-                    <p>EmailId : {{userInfo.emailId}}</p>
+                    <p>Email Id : {{userInfo.emailId}}</p>
                     <p>Age : {{userInfo.age}}</p>
                     <p>Gender : {{userInfo.gender}}</p>
                     <p>About Me : {{userInfo.aboutMe}}</p>
@@ -20,9 +20,9 @@
                     <p>Preferences - </p>
 
                     {{#each userInfo.preference}}
-                    <p class="fit-contents-p textIndent">
+                    <class="fit-contents-p textIndent">
                         {{@key}} : {{this}} <br>
-                    </p>
+                    
                     {{/each}}
                 </div>
 
@@ -43,7 +43,7 @@
                 <ol id="customlist">
                     {{#each userInfo.postId}}
                     <li>
-                        <a href="http://localhost:3000/posts/{{this}}">{{this}}</a>
+                        <a href="http://localhost:3000/posts/{{this}}">{{this.firstName}}Click to check all the posts</a>
 
                         <div class="btn-group px-2 mb-1">
                             <form method="post" action="/posts/delete/{{this}}">
@@ -63,18 +63,10 @@
                                 </div>
                             </form>
                         </div>
-
-
-
-
-
-
-                    </li>
+                        </li>
                     {{/each}}
-
-                </ol>
-
-            </div>
+                    </ol>
+                    </div>
             <div class="card-your-saved-posts mt-2 mb-2 px-2" id="yourSavedPosts">
                 <ol id="customlist">
                     {{#each userInfo.savedPost}}
@@ -84,12 +76,8 @@
                 </ol>
             </div>
         </div>
-
-
-
     </div>
-
-
+    
     <script>
         document.getElementById("allUserPostsButton").addEventListener("click", function () {
             document.getElementById("yourPosts").style.display = 'block';
