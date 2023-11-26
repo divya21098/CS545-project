@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
   overflow: auto;
   background-color: #F5F7F8 !important;
+  font-family: 'Work Sans' !important;
 }
 
 .site-nav{
