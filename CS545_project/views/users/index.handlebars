@@ -3,21 +3,26 @@
         <div class="card mt-2 mb-2">
             <div class="row">
                 <div class="col-sm div-row-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Avatar" />
+                    {{#if (eq userInfo.gender "Female")}}
+                    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678130-profile-alt-4-512.png"
+                        alt="Female Avatar" />
+                    {{else}}
+                    <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Male Avatar" />
+                    {{/if}}
                 </div>
-                <div class="col-sm ml-3 mt-3 mb-3">
-                    <p>{{userInfo.firstName}} {{userInfo.lastName}}</p>
-                    <p>{{userInfo.emailId}}</p>
-                    <p>{{userInfo.age}}</p>
-                    <p>{{userInfo.gender}}</p>
-                    <p>{{userInfo.aboutMe}}</p>
-                    <p>{{userInfo.nationality}}</p>
+                <div class="col-sm ml-1 mt-3 mb-2 profile-info">
+                    <p>Name : {{userInfo.firstName}} {{userInfo.lastName}}</p>
+                    <p>Email Id : {{userInfo.emailId}}</p>
+                    <p>Age : {{userInfo.age}}</p>
+                    <p>Gender : {{userInfo.gender}}</p>
+                    <p>About Me : {{userInfo.aboutMe}}</p>
+                    <p>Nationality : {{userInfo.nationality}}</p>
                     <p>Preferences - </p>
 
                     {{#each userInfo.preference}}
-                    <p class="fit-contents-p textIndent">
+                    <class="fit-contents-p textIndent">
                         {{@key}} : {{this}} <br>
-                    </p>
+                    
                     {{/each}}
                 </div>
 
@@ -38,7 +43,7 @@
                 <ol id="customlist">
                     {{#each userInfo.postId}}
                     <li>
-                        <a href="http://localhost:3000/posts/{{this}}">{{this}}</a>
+                        <a href="http://localhost:3000/posts/{{this}}">{{this.firstName}}Click to check all the posts</a>
 
                         <div class="btn-group px-2 mb-1">
                             <form method="post" action="/posts/delete/{{this}}">
@@ -58,18 +63,10 @@
                                 </div>
                             </form>
                         </div>
-
-
-
-
-
-
-                    </li>
+                        </li>
                     {{/each}}
-
-                </ol>
-
-            </div>
+                    </ol>
+                    </div>
             <div class="card-your-saved-posts mt-2 mb-2 px-2" id="yourSavedPosts">
                 <ol id="customlist">
                     {{#each userInfo.savedPost}}
@@ -79,12 +76,8 @@
                 </ol>
             </div>
         </div>
-
-
-
     </div>
-
-
+    
     <script>
         document.getElementById("allUserPostsButton").addEventListener("click", function () {
             document.getElementById("yourPosts").style.display = 'block';
