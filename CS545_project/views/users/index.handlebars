@@ -70,7 +70,7 @@
             <div class="card-your-saved-posts mt-2 mb-2 px-2" id="yourSavedPosts">
                 <ol id="customlist">
                     {{#each userInfo.savedPost}}
-                    <li><a href="http://localhost:3000/posts/{{this}}">{{this}} </a></li>
+                    <li><a href="http://localhost:3000/posts/{{this}}">{{this.firstName}}Click to check saved post </a></li>
                     {{/each}}
 
                 </ol>
