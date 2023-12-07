@@ -2,9 +2,14 @@
   <div class="container user-details-card">
     <div class="card mt-2 mb-2">
       <div class="row">
-        <div class="col-sm div-showUser-img">
-          <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Avatar" />
-        </div>
+        <div class="col-sm div-row-image">
+                    {{#if (eq userInfo.gender "Female")}}
+                    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678130-profile-alt-4-512.png"
+                        alt="Female Avatar" />
+                    {{else}}
+                    <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Male Avatar" />
+                    {{/if}}
+                </div>
         <div class="col-sm ml-3 mt-3 mb-3">
           <p>{{userInfo.firstName}} {{userInfo.lastName}}</p>
           <p>{{userInfo.emailId}}</p>
