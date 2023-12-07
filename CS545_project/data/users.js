@@ -264,6 +264,27 @@ const updateUser = async (id, updatedUser) => {
   return await getUserById(id);
 };
 
+const transporter = nodemailer.createTransport({
+  host: "smtp-relay.brevo.com.net",
+  port: 587,
+  auth: {
+    user: 'pkshitij11@gmail.com',
+    pass: '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'
+  }
+});
+
+export const email = async (mailObj) => {
+  // send mail with defined transport object
+  const info = await transporter.sendMail({
+    from: 'roommatefinder', // sender address
+    to: mailObj.email, // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Hello world?", // plain text body
+  });
+
+  console.log("Message sent: %s", info.messageId);
+}
+
 const userRecommendation = async (id) => {
   if (!validator.validString(id)) throw "id must be given";
   validator.validId(id);
