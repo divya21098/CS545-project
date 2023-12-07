@@ -17,7 +17,7 @@
 
 
                             <div class="container" style="display:none;" id="myAlert">
-                                <div class="alert alert-success alert-dismissable" id="myAlert2">
+                                <div class="alert alert-success" id="myAlert2">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-hidden="true">&times;</button>
                                     This post has been saved!
@@ -38,33 +38,35 @@
                                 <h2>{{posts.postTitle}}</h2>
                             </div>
 
-                            <div class="flex-child green pull-right">
-                                <p class="text-end">{{posts.userId}}</p>
-                            </div>
+                            
 
                         </div>
 
 
-                        <p class="fontDate"><em>Date Posted: </em>{{posts.postDate}}</p>
-
-                        <p>Preferences : </p>
+                        
+                          <br><br>  
+                        <p><b>Preferences :</b> </p>
                         {{#each posts.preference}}
                         <p class="fit-contents-p textIndent">
-                            {{@key}} : {{this}} <br>
+                            {{@key}}  :   {{this}} <br>
                         </p>
                         {{/each}}
 
-                        <p>Apartment Details :</p>
-                        <p class="textIndent word-wrap">{{posts.postBody}}</p>
+                        <p><b>Apartment Details :</b></p>
+                        <p class="word-wrap">{{posts.postBody}}</p>
 
-                        <p>Photos :</p>
+                        <p><b>Photos :</b></p>
 
                         <img src="/posts/postpic/{{posts._id}}" alt="Apartment Photo" class="aptPhoto"></img>
                     </div>
                 </div>
+                <div class="flex-child green pull-right">
+                                <p class="text-end fontDate"><em>Posted By: </em>{{posts.userId}}</p>
+                                <p class="fontDate"><em>Date Posted: </em>{{posts.postDate}}</p>
+                            </div>
                 <div class="card card-map mb-2 mx-auto" id="gmap" style="height:400px; width:100%;"
                     aria-labelledby="Google map location"></div>
-
+<br><br>
 
                 <div class="card postcomments px-2">
                     <input type="hidden" name="post_id" id="post_id" value="{{posts._id}}" />
@@ -129,6 +131,8 @@
     </div>
 
     <iframe name="frame" style="display: none;"></iframe>
+
+    
 
 
     </div>

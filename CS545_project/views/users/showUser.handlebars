@@ -11,13 +11,13 @@
                     {{/if}}
                 </div>
         <div class="col-sm ml-3 mt-3 mb-3">
-          <p>{{userInfo.firstName}} {{userInfo.lastName}}</p>
-          <p>{{userInfo.emailId}}</p>
-          <p>{{userInfo.age}}</p>
-          <p>{{userInfo.gender}}</p>
-          <p>{{userInfo.aboutMe}}</p>
-          <p>{{userInfo.nationality}}</p>
-          <p>Preferences - </p>
+          <p><b>Name: </b>{{userInfo.firstName}} {{userInfo.lastName}}</p>
+          <p><b>Email: </b>{{userInfo.emailId}}</p>
+          <p><b>Age: </b>{{userInfo.age}}</p>
+          <p><b>Gender: </b>{{userInfo.gender}}</p>
+          <p><b>About Me: </b>{{userInfo.aboutMe}}</p>
+          <p><b>Nationality: </b>{{userInfo.nationality}}</p>
+          <p><b>Preferences</b> - </p>
 
           {{#each userInfo.preference}}
           <p class="fit-contents-p textIndent">

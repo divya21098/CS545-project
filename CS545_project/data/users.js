@@ -283,7 +283,7 @@ const sendMail = async (mailObj) => {
   const info = await transporter.sendMail({
     
     from: 'pkshitij11@gmail.com', // sender address
-    to: 'kpatil8@stevens.edu', // list of receivers
+    to: 'dkamath@stevens.edu', // list of receivers
     subject: "Recommended users", // Subject line
     html: `<p>Here are the few recommended users for you to match with: ${firstFiveNames[0]}, ${firstFiveNames[1]}, ${firstFiveNames[2]}, ${firstFiveNames[3]}, ${firstFiveNames[4]}</p>
       <p><a href="http://localhost:3000/users/recommendation">Click here to find all the recommended users for you</a></p>`

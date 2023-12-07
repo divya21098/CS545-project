@@ -10,21 +10,24 @@
                     <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="Male Avatar" />
                     {{/if}}
                 </div>
-                <div class="col-sm ml-1 mt-3 mb-2 profile-info">
-                    <p>Name : {{userInfo.firstName}} {{userInfo.lastName}}</p>
-                    <p>Email Id : {{userInfo.emailId}}</p>
-                    <p>Age : {{userInfo.age}}</p>
-                    <p>Gender : {{userInfo.gender}}</p>
-                    <p>About Me : {{userInfo.aboutMe}}</p>
-                    <p>Nationality : {{userInfo.nationality}}</p>
-                    <p>Preferences - </p>
+                <div class="col-sm ml-3 mt-3 mb-3">
+          <p><b>Name: </b>{{userInfo.firstName}} {{userInfo.lastName}}</p>
+          <p><b>Email: </b>{{userInfo.emailId}}</p>
+          <p><b>Age: </b>{{userInfo.age}}</p>
+          <p><b>Gender: </b>{{userInfo.gender}}</p>
+          <p><b>About Me: </b>{{userInfo.aboutMe}}</p>
+          <p><b>Nationality: </b>{{userInfo.nationality}}</p>
+          <p><b>Preferences</b> - </p>
 
-                    {{#each userInfo.preference}}
-                    <class="fit-contents-p textIndent">
-                        {{@key}} : {{this}} <br>
-                    
-                    {{/each}}
-                </div>
+          {{#each userInfo.preference}}
+          <p class="fit-contents-p textIndent">
+            {{@key}}
+            :
+            {{this}}
+            <br />
+          </p>
+          {{/each}}
+        </div>
 
                 <form method="get" action="/users/myProfileEdit">
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
