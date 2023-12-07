@@ -1,6 +1,5 @@
 const userRoutes = require("./users");
 const postRoutes = require("./posts");
-const miscRoutes = require("./misc")
 const commentRoutes = require("./comments");
 const path = require("path");
 
@@ -10,7 +9,6 @@ const constructorMethod = (app) => {
   });
   app.use("/posts", postRoutes);
   app.use("/comments", commentRoutes);
-  // app.use("/contact", miscRoutes);
 
   app.use("/", userRoutes);
 

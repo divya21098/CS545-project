@@ -5,6 +5,7 @@ const users = mongoCollections.users;
 const { ObjectId } = require("mongodb");
 const validator = require("../helper");
 const bcrypt = require("bcryptjs");
+const nodemailer = require("nodemailer");
 const saltRounds = 10;
 
 const createUser = async (
@@ -134,6 +135,7 @@ const getUserById = async (id) => {
   const userCollection = await users();
   const user = await userCollection.findOne({ _id: ObjectId(id) });
   if (!user) throw "user with that id does not exist";
+  
   return user;
 };
 
@@ -265,25 +267,39 @@ const updateUser = async (id, updatedUser) => {
 };
 
 const transporter = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com.net",
+  host: "smtp-relay.brevo.com",
   port: 587,
   auth: {
     user: 'pkshitij11@gmail.com',
-    pass: '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'
+    pass: 'PFHNUf2AdzQTKMs9'
   }
 });
 
-export const email = async (mailObj) => {
+const sendMail = async (mailObj) => {
   // send mail with defined transport object
+  const firstFiveNames = mailObj.slice(0, 5).map(obj => obj.firstName);
+  console.log(firstFiveNames)
+  text = `Here are the recommended users: ${firstFiveNames[0]}, ${firstFiveNames[1]}, ${firstFiveNames[2]}, ${firstFiveNames[3]}, ${firstFiveNames[4]}`
   const info = await transporter.sendMail({
-    from: 'roommatefinder', // sender address
-    to: mailObj.email, // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
+    
+    from: 'pkshitij11@gmail.com', // sender address
+    to: 'kpatil8@stevens.edu', // list of receivers
+    subject: "Recommended users", // Subject line
+    html: `<p>Here are the few recommended users for you to match with: ${firstFiveNames[0]}, ${firstFiveNames[1]}, ${firstFiveNames[2]}, ${firstFiveNames[3]}, ${firstFiveNames[4]}</p>
+      <p><a href="http://localhost:3000/users/recommendation">Click here to find all the recommended users for you</a></p>`
   });
 
-  console.log("Message sent: %s", info.messageId);
+  console.log("Message sent: %s", firstFiveNames[0]);
 }
+
+let count = 0;
+
+const sendMailOnce = (recommendUsers) => {
+  if (recommendUsers.length !== 0 && count === 0) {
+    sendMail(recommendUsers);
+    count += 1;
+  }
+};
 
 const userRecommendation = async (id) => {
   if (!validator.validString(id)) throw "id must be given";
@@ -353,6 +369,12 @@ const userRecommendation = async (id) => {
     }
     recommendUsers[i]._id = recommendUsers[i]._id.toString();
   }
+
+  
+
+    sendMailOnce(recommendUsers);
+
+
   if (recommendUsers.length === 0) {
     throw "At the moment we were not able to recommend you the users. Please come back later.";
   }
