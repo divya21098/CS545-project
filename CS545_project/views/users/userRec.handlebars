@@ -3,25 +3,51 @@
 
     </style>
 
-    <div class="container my-3">
+    <div class="container-fluid">
         <h2 class="font-weight-light"> &nbsp; &nbsp;Recommended Users</h2>
-        <div class="row">
-
+        
+ {{#each userRec}}
             <div class="col-md-4">
+               
+                <div class="card card-userRec card-body justify-content-center" style="
+    margin-top: 10px;
+    margin-bottom: 8px;
+">
 
-                <div class="card card-userRec card-body justify-content-center">
+                    
+                    {{!-- <h3><a href="/users/checkUser/{{this._id}}">{{this.firstName}}</a></h3> --}}
 
-                    {{#each userRec}}
-                    <p><a href="/users/checkUser/{{this._id}}">{{this.firstName}}</a></p>
-                    <hr>
-                    {{/each}}
-
+                    <div class="item text-center">
+              <div class="testimonial">
+                {{!-- <img
+                  src="../public/images/person_1-min.jpg"
+                  alt="Image"
+                  class="img-fluid rounded-circle w-30 mb-4"
+                /> --}}
+                <div class="rate">
+                  <span class="icon-star text-warning"></span>
+                  <span class="icon-star text-warning"></span>
+                  <span class="icon-star text-warning"></span>
+                  <span class="icon-star text-warning"></span>
+                  <span class="icon-star text-warning"></span>
                 </div>
-
+                <h3 class="h5 text-primary mb-4"><a href="/users/checkUser/{{this._id}}">{{this.firstName}}</a></h3>
+                <blockquote>
+                  <p>
+                    &ldquo;{{this.aboutMe}}.&rdquo;
+                  </p>
+                </blockquote>
+                <p class="text-black-50">{{this.nationality}}, {{this.gender}}</p>
+              </div>
             </div>
 
-        </div>
-        <h3 class="mt-2"> Above are the Recommended Users</h3>
+                
+                </div>
+                
+            </div>
+{{/each}}
+        
+       
 
         {{#if hasErrors}}
         <ul class="error-list">
@@ -33,6 +59,8 @@
         </ul>
         {{/if}}
     </div>
+
+     <br><h3 class="mt-2" style="text-align: center;"> Above are the Recommended Users</h3>
     <script>
 
     </script>
